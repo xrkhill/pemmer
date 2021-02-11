@@ -115,7 +115,7 @@ func toBlob(reader *bufio.Reader, writer *bufio.Writer) {
 	// check for properly PEM encoded content and fail if not parsable
 	pemBytes, err := ioutil.ReadAll(reader)
 	if err != nil {
-		log.Fatal("unable to read bytes from buffer: %v", err)
+		log.Fatalf("unable to read bytes from buffer: %v", err)
 	}
 	pemBlock, _ := pem.Decode(pemBytes)
 	if pemBlock == nil {

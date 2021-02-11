@@ -1,2 +1,5 @@
 build:
-	go build pemmer.go
+	go build -v ./...
+
+test:
+	go test -v ./...
